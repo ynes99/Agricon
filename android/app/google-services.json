@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "490095458689",
+    "project_id": "agricon-dbbc3",
+    "storage_bucket": "agricon-dbbc3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:490095458689:android:90624702e3d8d00d159080",
+        "android_client_info": {
+          "package_name": "com.pack.inesichrak"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "490095458689-r4jjfqaliougih81tvmifrenkm4a02li.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDktN-c0MLugqYWmO3k5UzYwnqKGNS6C94"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "490095458689-r4jjfqaliougih81tvmifrenkm4a02li.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
