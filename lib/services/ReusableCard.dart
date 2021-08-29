@@ -1,4 +1,3 @@
-import 'package:expandable_text/expandable_text.dart';
 import 'package:flutter/material.dart';
 
 Padding ReusableCard(String asset, IconButton iconButton) {

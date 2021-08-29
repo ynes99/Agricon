@@ -31,7 +31,9 @@ class _AppBarContentState extends State<AppBarContent> {
                       'Bonjour',
                       style: Theme.of(context).textTheme.headline1,
                     ),
-                    username(),
+                    username(
+                      Theme.of(context).textTheme.headline1,
+                    ),
                   ],
                 ),
               ),

@@ -97,7 +97,7 @@ class MyCustomFormState extends State<MyCustomForm> {
                       textAlign: TextAlign.left,
                       style: TextStyle(fontSize: 16),
                     ),
-                    username(),
+                    username(TextStyle(fontSize: 16)),
                   ],
                 ),
               ),

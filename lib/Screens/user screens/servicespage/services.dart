@@ -39,7 +39,7 @@ class _ServicesState extends State<Services> {
       ),
       body: ListView(
         children: <Widget>[
-          Expanded(
+          Container(
             child: WhiteCardReusable(
               margsize: EdgeInsets.fromLTRB(20.0, 20.0, 20.0, 10.0),
               cardChild: Column(
@@ -91,7 +91,7 @@ class _ServicesState extends State<Services> {
                               _showMyDialog1(context, field);
                               break;
                             case 1:
-                              _showMyDialog1(context, field);
+                              _showMyDialog2(context, field);
                               break;
                           }
                         },

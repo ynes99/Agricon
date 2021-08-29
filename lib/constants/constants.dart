@@ -34,6 +34,8 @@ const TextStyle kH1Style = TextStyle(
 );
 
 class username extends StatefulWidget {
+  username(this.Style);
+  final TextStyle Style;
   @override
   _usernameState createState() => _usernameState();
 }
@@ -54,15 +56,14 @@ class _usernameState extends State<username> {
 
           return new Text(
             userDocument["name"],
+            style: widget.Style,
           );
         });
   }
 }
 
-username txt = username();
-
 class Numero extends StatefulWidget {
-  TextStyle Style;
+  final TextStyle Style;
   Numero({@required this.Style});
 
   @override
@@ -91,7 +92,7 @@ class _NumeroState extends State<Numero> {
 }
 
 class e_mail extends StatefulWidget {
-  TextStyle Style;
+  final TextStyle Style;
   e_mail({@required this.Style});
 
   @override

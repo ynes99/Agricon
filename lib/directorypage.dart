@@ -41,7 +41,8 @@ class _DirectoryState extends State<Directory> {
   }
 
   void _onItemTapped(int selectedIndex) {
-    _pageController.jumpToPage(selectedIndex);
+    _pageController.animateToPage(selectedIndex,
+        duration: Duration(milliseconds: 500), curve: Curves.easeOut);
   }
 
   @override
@@ -52,10 +53,10 @@ class _DirectoryState extends State<Directory> {
       //   child: CustomAppBar(),
       // ),
       body: PageView(
+        scrollDirection: Axis.horizontal,
         controller: _pageController,
         children: _screens,
         onPageChanged: _onPageChanged,
-        physics: NeverScrollableScrollPhysics(),
       ),
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
