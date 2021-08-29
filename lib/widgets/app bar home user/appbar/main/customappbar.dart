@@ -11,6 +11,7 @@ class _CustomAppBarState extends State<CustomAppBar> {
   Widget build(BuildContext context) {
     return Material(
       child: Container(
+        alignment: Alignment.topCenter,
         height: 115,
         decoration: const BoxDecoration(
           gradient: LinearGradient(
