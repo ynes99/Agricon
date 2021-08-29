@@ -36,6 +36,9 @@ class _HomeState extends State<Home> {
                     controller: _controller,
                     tabs: [
                       Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(50),
+                        ),
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [

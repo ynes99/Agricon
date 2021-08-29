@@ -18,16 +18,16 @@ class _BlogState extends State<Blog> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: PreferredSize(
-        preferredSize: const Size.fromHeight(100.0),
+        preferredSize: const Size.fromHeight(115.0),
         child: Material(
           elevation: 5,
           child: Container(
             decoration: const BoxDecoration(
               gradient: LinearGradient(
                 colors: <Color>[
-                  Color(0xFF91DC3B),
-                  Color(0xFF91DC3B),
                   Color(0xFFCAADAD),
+                  Color(0xFF91DC3B),
+                  Color(0xFF91DC3B),
                   Color(0xFFCAADAD)
                 ],
               ),

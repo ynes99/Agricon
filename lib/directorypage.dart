@@ -48,10 +48,6 @@ class _DirectoryState extends State<Directory> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: PreferredSize(
-      //   preferredSize: const Size.fromHeight(100.0),
-      //   child: CustomAppBar(),
-      // ),
       body: PageView(
         scrollDirection: Axis.horizontal,
         controller: _pageController,

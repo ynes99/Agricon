@@ -9,10 +9,12 @@ import 'package:flutter_easyloading/flutter_easyloading.dart';
 class ModifierVotreProfil extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      floatingActionButton: FloatingAction(),
-      backgroundColor: kCouleurScaffold,
-      body: FirebaseAuthStuff(),
+    return SafeArea(
+      child: Scaffold(
+        floatingActionButton: FloatingAction(),
+        backgroundColor: kCouleurScaffold,
+        body: FirebaseAuthStuff(),
+      ),
     );
   }
 }

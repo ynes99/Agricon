@@ -28,6 +28,9 @@ class MyApp extends StatelessWidget {
       DeviceOrientation.portraitUp,
       DeviceOrientation.portraitDown,
     ]);
+    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+      statusBarColor: Colors.black,
+    ));
     return MultiProvider(
       providers: [
         // 2
@@ -37,7 +40,7 @@ class MyApp extends StatelessWidget {
         // 3
         StreamProvider(
           create: (context) =>
-          context.read<AuthenticationService>().authStateChanges,
+              context.read<AuthenticationService>().authStateChanges,
           initialData: null,
         )
       ],
