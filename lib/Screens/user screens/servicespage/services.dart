@@ -183,7 +183,12 @@ Future<void> _showMyDialog1(context, TextEditingController field) async {
     barrierDismissible: false, // user must tap button!
     builder: (BuildContext context) {
       return AlertDialog(
-        title: const Text('Attention'),
+        title: const Text(
+          'Attention',
+          style: TextStyle(
+            fontWeight: FontWeight.w900,
+          ),
+        ),
         content: SingleChildScrollView(
           child: ListBody(
             children: const <Widget>[
@@ -220,7 +225,12 @@ Future<void> _showMyDialog2(context, TextEditingController field) async {
     barrierDismissible: false, // user must tap button!
     builder: (BuildContext context) {
       return AlertDialog(
-        title: const Text('Attention'),
+        title: const Text(
+          'Attention',
+          style: TextStyle(
+            fontWeight: FontWeight.w900,
+          ),
+        ),
         content: SingleChildScrollView(
           child: ListBody(
             children: const <Widget>[
