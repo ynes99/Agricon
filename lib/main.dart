@@ -30,6 +30,7 @@ class MyApp extends StatelessWidget {
     ]);
     SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
       statusBarColor: Colors.black,
+      statusBarIconBrightness: Brightness.light,
     ));
     return MultiProvider(
       providers: [

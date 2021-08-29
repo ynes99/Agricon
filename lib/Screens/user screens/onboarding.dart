@@ -8,111 +8,129 @@ class Onboarding_page extends StatelessWidget {
     PageModel(
       widget: Scaffold(
         backgroundColor: Colors.white,
-        body: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Container(
-              child: Image.asset('assets/images/first_im.png'),
-            ),
-            SizedBox(height: 30),
-            Padding(
-              padding: const EdgeInsets.all(16.0),
-              child: Container(
-                child: Text(
-                  'Bienvenue Dans Agricon!',
-                  style: TextStyle(fontWeight: FontWeight.w700, fontSize: 19),
+        body: Center(
+          child: SingleChildScrollView(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Container(
+                  child: Image.asset('assets/images/first_im.png'),
                 ),
-              ),
+                SizedBox(height: 60),
+                Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: Container(
+                    child: Text(
+                      'Bienvenue Dans Agricon!',
+                      style:
+                          TextStyle(fontWeight: FontWeight.w700, fontSize: 19),
+                    ),
+                  ),
+                ),
+                Container(
+                  child: Text(
+                    'Venez rejoindre notre réseau d\'agriculteurs\ncrée par Aggricus',
+                    textAlign: TextAlign.center,
+                  ),
+                ),
+                SizedBox(height: 10),
+                Container(
+                  width: 30.0,
+                  height: 30.0,
+                  alignment: Alignment.bottomLeft,
+                  child: Image.asset('assets/images/logotiny1.png'),
+                ),
+              ],
             ),
-            Container(
-              child: Text(
-                'Venez rejoindre notre réseau d\'agriculteurs\ncrée par Aggricus',
-                textAlign: TextAlign.center,
-              ),
-            ),
-            SizedBox(height: 10),
-            Container(
-              width: 30.0,
-              height: 30.0,
-              alignment: Alignment.bottomLeft,
-              child: Image.asset('assets/images/logotiny1.png'),
-            ),
-          ],
+          ),
         ),
       ),
     ),
     PageModel(
       widget: Scaffold(
         backgroundColor: Colors.white,
-        body: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Container(
-              child: Image.asset('assets/images/second_im.png'),
-            ),
-            SizedBox(height: 30),
-            Padding(
-              padding: const EdgeInsets.all(16.0),
-              child: Container(
-                child: Text(
-                  'Créer Votre Réseau',
-                  style: TextStyle(fontWeight: FontWeight.w700, fontSize: 19),
+        body: Center(
+          child: SingleChildScrollView(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Container(
+                  child: Image.asset('assets/images/second_im.png'),
                 ),
-              ),
+                SizedBox(height: 50),
+                Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: Container(
+                    child: Text(
+                      'Créer Votre Réseau',
+                      style:
+                          TextStyle(fontWeight: FontWeight.w700, fontSize: 19),
+                    ),
+                  ),
+                ),
+                Container(
+                  child: Text(
+                    'Créer de nouvelles liaisons avec nos partenaires\net vendez vos produits chez nous',
+                    textAlign: TextAlign.center,
+                  ),
+                ),
+                SizedBox(height: 10),
+                Container(
+                  width: 30.0,
+                  height: 30.0,
+                  alignment: Alignment.bottomLeft,
+                  child: Image.asset('assets/images/logotiny1.png'),
+                ),
+              ],
             ),
-            Container(
-              child: Text(
-                'Créer de nouvelles liaisons avec nos partenaires\net vendez vos produits chez nous',
-                textAlign: TextAlign.center,
-              ),
-            ),
-            SizedBox(height: 10),
-            Container(
-              width: 30.0,
-              height: 30.0,
-              alignment: Alignment.bottomLeft,
-              child: Image.asset('assets/images/logotiny1.png'),
-            ),
-          ],
+          ),
         ),
       ),
     ),
     PageModel(
       widget: Scaffold(
         backgroundColor: Colors.white,
-        body: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Container(
-              child: Image.asset('assets/images/third_im.png'),
-            ),
-            SizedBox(height: 30),
-            Padding(
-              padding: const EdgeInsets.all(16.0),
-              child: Container(
-                child: Text(
-                  'En Savoir Plus',
-                  style: TextStyle(fontWeight: FontWeight.w700, fontSize: 19),
+        body: Center(
+          child: SingleChildScrollView(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Container(
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Image.asset('assets/images/third_im.png'),
+                  ),
                 ),
-              ),
+                SizedBox(height: 50),
+                Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: Container(
+                    child: Text(
+                      'En Savoir Plus',
+                      style:
+                          TextStyle(fontWeight: FontWeight.w700, fontSize: 19),
+                    ),
+                  ),
+                ),
+                Container(
+                  child: Text(
+                    'Elargissez vos connaisances en agriculture\n grâce à nos articles de sensibilisation',
+                    textAlign: TextAlign.center,
+                  ),
+                ),
+                SizedBox(height: 10),
+                Container(
+                  width: 30.0,
+                  height: 30.0,
+                  alignment: Alignment.bottomLeft,
+                  child: Image.asset('assets/images/logotiny1.png'),
+                ),
+              ],
             ),
-            Container(
-              child: Text(
-                'Elargissez vos connaisances en agriculture\n grâce à nos articles de sensibilisation',
-                textAlign: TextAlign.center,
-              ),
-            ),
-            SizedBox(height: 10),
-            Container(
-              width: 30.0,
-              height: 30.0,
-              alignment: Alignment.bottomLeft,
-              child: Image.asset('assets/images/logotiny1.png'),
-            ),
-          ],
+          ),
         ),
       ),
     ),

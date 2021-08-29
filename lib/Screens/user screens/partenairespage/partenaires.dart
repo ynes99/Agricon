@@ -96,13 +96,16 @@ class Element extends StatelessWidget {
                     ),
                     Container(
                       width: 140,
-                      child: ExpandableText(
-                        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed imperdiet lobortis velit in placerat. Nulla finibus est at massa tempus maximus. Aliquam vitae mi vel velit elementum volutpat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut sodales sit amet risus vitae sollicitudin. Sed porttitor accumsan arcu a fermentum. Pellentesque eleifend enim diam, a rhoncus.',
-                        expandText: 'show more',
-                        collapseText: 'show less',
-                        maxLines: 7,
-                        style: TextStyle(
-                          fontSize: 14,
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: ExpandableText(
+                          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed imperdiet lobortis velit in placerat. Nulla finibus est at massa tempus maximus. Aliquam vitae mi vel velit elementum volutpat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut sodales sit amet risus vitae sollicitudin. Sed porttitor accumsan arcu a fermentum. Pellentesque eleifend enim diam, a rhoncus.',
+                          expandText: 'show more',
+                          collapseText: 'show less',
+                          maxLines: 6,
+                          style: TextStyle(
+                            fontSize: 14,
+                          ),
                         ),
                       ),
                     ),
