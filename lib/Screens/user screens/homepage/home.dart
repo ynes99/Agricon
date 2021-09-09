@@ -1,8 +1,7 @@
 import 'package:expandable_text/expandable_text.dart';
 import 'package:firebasetest/services/ReusableCard.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:firebasetest/widgets/app bar home user/appbar/main/customappbar.dart';
+import 'package:firebasetest/widgets/app bar home user/appbar/main/main app bar content.dart';
 
 Color colour1_1 = Colors.grey;
 Color colour2_1 = Colors.grey;
@@ -17,142 +16,160 @@ class _HomeState extends State<Home> {
   TabController _controller;
   @override
   Widget build(BuildContext context) {
-    return DefaultTabController(
-      initialIndex: 0,
-      length: 3,
-      child: Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.white,
-          bottom: PreferredSize(
-            preferredSize: const Size.fromHeight(145),
-            child: Column(
-              children: [
-                CustomAppBar(),
-                PreferredSize(
-                  preferredSize: new Size(300.0, 300.0),
-                  child: TabBar(
-                    indicatorColor: Colors.lime,
-                    controller: _controller,
-                    tabs: [
-                      Container(
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Padding(
-                              padding: const EdgeInsets.fromLTRB(5, 8, 5, 4),
-                              child: Icon(Icons.description),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.fromLTRB(5, 2, 5, 8),
-                              child: Text(
-                                'Nouveauté\ndu Blog',
-                                textAlign: TextAlign.center,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                      Container(
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Padding(
-                              padding: const EdgeInsets.fromLTRB(5, 8, 5, 4),
-                              child: Icon(Icons.park),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.fromLTRB(5, 2, 5, 8),
-                              child: Text(
-                                'Nouveaux\nProduits',
-                                textAlign: TextAlign.center,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                      Container(
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Padding(
-                              padding: const EdgeInsets.fromLTRB(5, 8, 5, 4),
-                              child: Icon(Icons.groups),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.fromLTRB(5, 2, 5, 8),
-                              child: Text(
-                                'Produits\nPopulaires',
-                                textAlign: TextAlign.center,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ],
-                  ),
+    return SafeArea(
+      child: DefaultTabController(
+        initialIndex: 0,
+        length: 3,
+        child: Scaffold(
+          appBar: AppBar(
+            toolbarHeight: 201,
+            flexibleSpace: Container(
+              alignment: Alignment.topCenter,
+              decoration: const BoxDecoration(
+                gradient: LinearGradient(
+                  colors: <Color>[
+                    Color(0xFF91DC3B),
+                    Color(0xFF91DC3B),
+                    Color(0xFFCAADAD),
+                    Color(0xFFCAADAD)
+                  ],
                 ),
-              ],
+              ),
+              child: AppBarContent(),
             ),
-          ),
-        ),
-        body: TabBarView(
-          controller: _controller,
-          children: [
-            Scaffold(
-              body: Container(
-                child: ListView(
-                  children: [
-                    ReusableCard(
-                      'assets/images/exp1.jpg',
-                      IconButton(
-                        onPressed: () {
-                          setState(() {
-                            colour1_1 == Colors.pink
-                                ? colour1_1 = Colors.grey
-                                : colour1_1 = Colors.pink;
-                          });
-                        },
-                        color: colour1_1,
-                        icon: Icon(Icons.favorite),
+            backgroundColor: Colors.white,
+            bottom: PreferredSize(
+              preferredSize: Size(25, 25),
+              child: Container(
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                child: TabBar(
+                  labelColor: Colors.black,
+                  unselectedLabelColor: Colors.grey[700],
+                  indicatorColor: Colors.lime,
+                  indicatorSize: TabBarIndicatorSize.label,
+                  controller: _controller,
+                  tabs: [
+                    Container(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.fromLTRB(5, 8, 5, 4),
+                            child: Icon(Icons.description),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.fromLTRB(5, 2, 5, 8),
+                            child: Text(
+                              'Nouveauté\ndu Blog',
+                              textAlign: TextAlign.center,
+                            ),
+                          ),
+                        ],
                       ),
                     ),
-                    ReusableCard(
-                      'assets/images/exp2.jpg',
-                      IconButton(
-                        onPressed: () {
-                          setState(() {
-                            colour2_1 == Colors.pink
-                                ? colour2_1 = Colors.grey
-                                : colour2_1 = Colors.pink;
-                          });
-                        },
-                        color: colour2_1,
-                        icon: Icon(Icons.favorite),
+                    Container(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.fromLTRB(5, 8, 5, 4),
+                            child: Icon(Icons.park),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.fromLTRB(5, 2, 5, 8),
+                            child: Text(
+                              'Nouveaux\nProduits',
+                              textAlign: TextAlign.center,
+                            ),
+                          ),
+                        ],
                       ),
                     ),
-                    ReusableCard(
-                      'assets/images/Landscape-Color.jpg',
-                      IconButton(
-                        onPressed: () {
-                          setState(() {
-                            colour3_1 == Colors.pink
-                                ? colour3_1 = Colors.grey
-                                : colour3_1 = Colors.pink;
-                          });
-                        },
-                        color: colour3_1,
-                        icon: Icon(Icons.favorite),
+                    Container(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.fromLTRB(5, 8, 5, 4),
+                            child: Icon(Icons.groups),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.fromLTRB(5, 2, 5, 8),
+                            child: Text(
+                              'Produits\nPopulaires',
+                              textAlign: TextAlign.center,
+                            ),
+                          ),
+                        ],
                       ),
                     ),
                   ],
                 ),
               ),
             ),
-            Scaffold(body: List_reusable()),
-            Scaffold(
-              body: List_reusable(),
-            ),
-          ],
+          ),
+          body: TabBarView(
+            controller: _controller,
+            children: [
+              Scaffold(
+                body: Container(
+                  child: ListView(
+                    children: [
+                      ReusableCard(
+                        'assets/images/exp1.jpg',
+                        IconButton(
+                          onPressed: () {
+                            setState(() {
+                              colour1_1 == Colors.pink
+                                  ? colour1_1 = Colors.grey
+                                  : colour1_1 = Colors.pink;
+                            });
+                          },
+                          color: colour1_1,
+                          icon: Icon(Icons.favorite),
+                        ),
+                      ),
+                      ReusableCard(
+                        'assets/images/exp2.jpg',
+                        IconButton(
+                          onPressed: () {
+                            setState(() {
+                              colour2_1 == Colors.pink
+                                  ? colour2_1 = Colors.grey
+                                  : colour2_1 = Colors.pink;
+                            });
+                          },
+                          color: colour2_1,
+                          icon: Icon(Icons.favorite),
+                        ),
+                      ),
+                      ReusableCard(
+                        'assets/images/Landscape-Color.jpg',
+                        IconButton(
+                          onPressed: () {
+                            setState(() {
+                              colour3_1 == Colors.pink
+                                  ? colour3_1 = Colors.grey
+                                  : colour3_1 = Colors.pink;
+                            });
+                          },
+                          color: colour3_1,
+                          icon: Icon(Icons.favorite),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              Scaffold(body: List_reusable()),
+              Scaffold(
+                body: List_reusable(),
+              ),
+            ],
+          ),
         ),
       ),
     );
@@ -212,7 +229,7 @@ class Card_home extends StatelessWidget {
               height: 180,
             ),
             Padding(
-              padding: const EdgeInsets.fromLTRB(15, 15, 15, 5),
+              padding: const EdgeInsets.fromLTRB(10, 15, 15, 5),
               child: SingleChildScrollView(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,

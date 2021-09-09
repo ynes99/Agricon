@@ -142,7 +142,6 @@ class Onboarding_page extends StatelessWidget {
       body: Onboarding(
         background: Colors.white,
         proceedButtonStyle: ProceedButtonStyle(
-          proceedButtonPadding: EdgeInsets.all(15.0),
           proceedButtonColor: kCouleurPrimaire,
           proceedpButtonText: Text(
             'Se Connecter',

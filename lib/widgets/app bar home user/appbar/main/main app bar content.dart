@@ -1,10 +1,10 @@
-import 'package:firebasetest/widgets/PopUpMenu/a_propos.dart';
-import 'package:firebasetest/widgets/PopUpMenu/modifier_votre_profil.dart';
+import 'package:firebasetest/Screens/user screens/homepage/PopUpMenu/a_propos.dart';
+import 'package:firebasetest/Screens/user screens/homepage/PopUpMenu/modifier_votre_profil.dart';
 import 'package:flutter/material.dart';
 import 'package:firebasetest/constants/constants.dart';
 import 'package:provider/provider.dart';
 import 'package:firebasetest/services/authenticationService.dart';
-import 'package:firebasetest/widgets/PopUpMenu/notre équipe.dart';
+import 'package:firebasetest/Screens/user screens/homepage/PopUpMenu/notre équipe.dart';
 
 // Variable pour reprendre le nom de l'utilisateur apres
 
@@ -17,13 +17,16 @@ class _AppBarContentState extends State<AppBarContent> {
   @override
   Widget build(BuildContext context) {
     return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
+      mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20),
+          padding: const EdgeInsets.all(18.0),
           child: Row(
             children: <Widget>[
+              SizedBox(
+                width: 15,
+              ),
               Padding(
                 padding: const EdgeInsets.all(10.0),
                 child: Column(

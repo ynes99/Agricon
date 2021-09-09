@@ -76,18 +76,18 @@ class AuthenticationService {
 
 CollectionReference users = FirebaseFirestore.instance.collection('UserData');
 
-Future<void> updateUserName(String new_name) {
+Future<void> updateUserName(String newname) {
   return users
       .doc('$uid')
-      .update({'name': new_name})
+      .update({'name': newname})
       .then((value) => print("User Updated"))
       .catchError((error) => print("Failed to update user: $error"));
 }
 
-Future<void> updateUserPhone(String new_phone) {
+Future<void> updateUserPhone(String newphone) {
   return users
       .doc('$uid')
-      .update({'phone number': new_phone})
+      .update({'phone number': newphone})
       .then((value) => print("User Updated"))
       .catchError((error) => print("Failed to update user: $error"));
 }

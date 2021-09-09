@@ -1,7 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebasetest/widgets/PopUpMenu/a_propos.dart';
-import 'package:firebasetest/widgets/PopUpMenu/modifier_votre_profil.dart';
-import 'package:firebasetest/widgets/PopUpMenu/notre%20%C3%A9quipe.dart';
+import 'package:firebasetest/Screens/user screens/homepage/PopUpMenu/a_propos.dart';
+import 'package:firebasetest/Screens/user screens/homepage/PopUpMenu/modifier_votre_profil.dart';
+import 'package:firebasetest/Screens/user screens/homepage/PopUpMenu/notre%20%C3%A9quipe.dart';
 import 'package:firebasetest/directorypage.dart';
 import 'package:firebasetest/services/authenticationService.dart';
 import 'package:flutter/material.dart';

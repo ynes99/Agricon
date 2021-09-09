@@ -47,14 +47,15 @@ class _ServicesState extends State<Services> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Text(
-                    'Voulez-Vous Achetez une Annonce ? Ou Bien Mettre Vos Produits Sur Notre Site Web ?'
-                    '\nEnvoyer Une Demande Ecrite Selon Ce Que Vous Voulez Faire! ',
+                    'Voulez-vous achetez une annonce ? Ou bien mettre vos produits sur notre site web ?'
+                    '\nenvoyer une demande écrite selon votre besoin!\n ',
                     style: TextStyle(
                       fontWeight: FontWeight.w500,
                     ),
                   ),
                   Text(
-                      'Envoyer Une Demande Détaillée avec vos informations privées : '),
+                      'Envoyer une demande détaillée avec vos informations privées : ',
+                  ),
                   SizedBox(
                     width: double.infinity,
                     height: 20,
