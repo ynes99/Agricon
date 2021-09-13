@@ -23,6 +23,7 @@ class _ServicesState extends State<Services> {
           child: Container(
             decoration: const BoxDecoration(
               gradient: LinearGradient(
+                //couleut de l'app bar
                 colors: <Color>[
                   Color(0xFFCAADAD),
                   Color(0xFFCAADAD),
@@ -54,7 +55,7 @@ class _ServicesState extends State<Services> {
                     ),
                   ),
                   Text(
-                      'Envoyer une demande détaillée avec vos informations privées : ',
+                    'Envoyer une demande détaillée avec vos informations privées : ',
                   ),
                   SizedBox(
                     width: double.infinity,
@@ -148,6 +149,7 @@ class _ServicesState extends State<Services> {
 }
 
 class WhiteCardReusable extends StatelessWidget {
+  //interface reutilisable
   WhiteCardReusable({this.margsize, this.cardChild});
   final EdgeInsets margsize;
   final Widget cardChild;
@@ -167,18 +169,21 @@ class WhiteCardReusable extends StatelessWidget {
 }
 
 void addData1(TextEditingController field) {
+  //ajout de la demande a la base de donnee
   FirebaseFirestore.instance.collection("Demandes_Annonces").add(
     {"user": "$uid", "text": field.text},
   );
 }
 
 void addData2(TextEditingController field) {
+  //ajout de la demande a la base de donnee
   FirebaseFirestore.instance.collection("Demandes_Produits").add(
     {"user": "$uid", "text": field.text},
   );
 }
 
 Future<void> _showMyDialog1(context, TextEditingController field) async {
+  //alerte pour confirmer la demande
   return showDialog<void>(
     context: context,
     barrierDismissible: false, // user must tap button!
@@ -221,6 +226,7 @@ Future<void> _showMyDialog1(context, TextEditingController field) async {
 }
 
 Future<void> _showMyDialog2(context, TextEditingController field) async {
+  //alerte pour confirmer la demande
   return showDialog<void>(
     context: context,
     barrierDismissible: false, // user must tap button!

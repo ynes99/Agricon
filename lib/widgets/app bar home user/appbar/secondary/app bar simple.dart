@@ -7,6 +7,7 @@ class SimpleBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    //app bar esthetique
     return SafeArea(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,

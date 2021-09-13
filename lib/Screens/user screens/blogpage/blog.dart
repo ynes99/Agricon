@@ -3,6 +3,7 @@ import 'package:firebasetest/services/ReusableCard.dart';
 import 'package:flutter/material.dart';
 
 class Blog extends StatefulWidget {
+  //page contenant les articles du blog
   @override
   _BlogState createState() => _BlogState();
 }
@@ -40,6 +41,7 @@ class _BlogState extends State<Blog> {
       ),
       body: Center(
         child: ListView(
+          //liste des postes du blog
           children: [
             ReusableCard(
               'assets/images/exp1.jpg',

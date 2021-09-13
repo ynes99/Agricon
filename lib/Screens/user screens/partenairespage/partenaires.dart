@@ -59,6 +59,7 @@ class _PartenairesState extends State<Partenaires> {
 }
 
 class Element extends StatelessWidget {
+  //element graphique contenant un partenaire et la description lui concernant
   Element({@required this.asset});
   final String asset;
 

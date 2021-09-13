@@ -6,8 +6,6 @@ import 'package:provider/provider.dart';
 import 'package:firebasetest/services/authenticationService.dart';
 import 'package:firebasetest/Screens/user screens/homepage/PopUpMenu/notre équipe.dart';
 
-// Variable pour reprendre le nom de l'utilisateur apres
-
 class AppBarContent extends StatefulWidget {
   @override
   _AppBarContentState createState() => _AppBarContentState();
@@ -28,6 +26,7 @@ class _AppBarContentState extends State<AppBarContent> {
                 width: 15,
               ),
               Padding(
+                //titre de l'app bar
                 padding: const EdgeInsets.all(10.0),
                 child: Column(
                   children: [
@@ -56,26 +55,33 @@ class _AppBarContentState extends State<AppBarContent> {
               Padding(
                 padding: const EdgeInsets.all(10.0),
                 child: PopupMenuButton(
+                  //le pop up menu dans l'app bar et ses choix
                   onSelected: (value) {
                     switch (value) {
                       case 0:
                         NextPage(context, ModifierVotreProfil());
+                        //redirection vers la page modifier votre profil
                         break;
                       case 1:
                         NextPage(context, A_Propos());
+                        //redirection vers la page A Propos
                         break;
                       case 2:
                         NextPage(context, Team());
+                        //redirection vers la page Team
                         break;
                       case 3:
                         context.read<AuthenticationService>().signOut();
+                        //deconnexion et redirection vers sign in
                         break;
                     }
                   },
                   elevation: 6,
                   shape: OutlineInputBorder(
+                      // esthetique du pop up menu
                       borderSide: BorderSide(color: Colors.grey, width: 1)),
                   itemBuilder: (context) => [
+                    // esthetique du pop up menu
                     PopupMenuItem(
                       child: MenuItem(
                         texte: Text("Modifier votre profil"),
@@ -141,6 +147,7 @@ class MenuItem extends StatelessWidget {
 }
 
 void NextPage(context, Widget page) {
+  //animation des transitions de page
   Navigator.push(
     context,
     PageRouteBuilder(

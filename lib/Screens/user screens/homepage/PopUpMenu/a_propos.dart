@@ -2,6 +2,7 @@ import 'package:firebasetest/constants/constants.dart';
 import 'package:flutter/material.dart';
 
 class A_Propos extends StatelessWidget {
+  //page contenant des details sur aggricus
   @override
   Widget build(BuildContext context) {
     return SafeArea(

@@ -1,4 +1,5 @@
 class Validator {
+  //verifie si les mots de passe ou les formulaires entrées sont correctes
   String validateName(String value) {
     String pattern = r'(^[a-zA-Z ]*$)';
     RegExp regExp = new RegExp(pattern);

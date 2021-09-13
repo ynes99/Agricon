@@ -5,6 +5,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class SplashScreen extends StatefulWidget {
+  //retourne une page de demarrage de l'application
   @override
   SplashScreenState createState() => new SplashScreenState();
 }
@@ -17,11 +18,13 @@ class SplashScreenState extends State<SplashScreen>
   Animation<double> animation;
 
   startTime() async {
+    //duree de l'animation du splash screen
     var _duration = new Duration(seconds: 3);
     return new Timer(_duration, navigationPage);
   }
 
   void navigationPage() {
+    //apres l'apparition de l'icone du splash screen on est redirige ves la page de onboarding
     Navigator.of(context).pushReplacementNamed(SOnboarding);
   }
 
@@ -31,7 +34,7 @@ class SplashScreenState extends State<SplashScreen>
     animationController = new AnimationController(
         vsync: this, duration: new Duration(seconds: 2));
     animation =
-    new CurvedAnimation(parent: animationController, curve: Curves.easeOut);
+        new CurvedAnimation(parent: animationController, curve: Curves.easeOut);
 
     animation.addListener(() => this.setState(() {}));
     animationController.forward();

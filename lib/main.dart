@@ -17,7 +17,7 @@ import 'package:firebase_core/firebase_core.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
+  await Firebase.initializeApp(); //initialisation de flutterfire
   runApp(MyApp());
 }
 
@@ -25,10 +25,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     SystemChrome.setPreferredOrientations([
+      //orientation de l'ecran est forcé sur portrait
       DeviceOrientation.portraitUp,
       DeviceOrientation.portraitDown,
     ]);
     SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+      // le theme de la bar de status est changé
       statusBarColor: Colors.black,
       statusBarIconBrightness: Brightness.light,
     ));
@@ -78,9 +80,10 @@ class MyApp extends StatelessWidget {
             ),
             bodyText2: TextStyle(fontSize: 14.0),
           ),
-        ),
+        ), //theme general de l'application
         initialRoute: Splash_Screen,
         routes: {
+          //map de navigation de l'application
           Splash_Screen: (context) => SplashScreen(),
           Sign_in: (context) => SignInPage(),
           Sign_Up: (context) => SignUpScreen(),
@@ -96,6 +99,9 @@ class MyApp extends StatelessWidget {
 }
 
 class AuthenticationWrapper extends StatelessWidget {
+  //fonction qui determine
+  // si l'utilisateur est connecte et le redirige vers home
+  // sinon vers la page d'authentification
   @override
   Widget build(BuildContext context) {
     final firebaseuser = context.watch<User>();

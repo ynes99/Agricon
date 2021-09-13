@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 Padding ReusableCard(String asset, IconButton iconButton) {
+  //interface reutilisable dans le code
   return Padding(
     padding: const EdgeInsets.fromLTRB(20.0, 20.0, 20.0, 10.0),
     child: Material(

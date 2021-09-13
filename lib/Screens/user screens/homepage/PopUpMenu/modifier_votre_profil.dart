@@ -7,6 +7,7 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 
 class ModifierVotreProfil extends StatelessWidget {
+  //page permettant la modification des informations de l'utilisaateur
   @override
   Widget build(BuildContext context) {
     return SafeArea(

@@ -6,6 +6,7 @@ import 'package:firebasetest/main.dart';
 class Onboarding_page extends StatelessWidget {
   final onboardingPagesList = [
     PageModel(
+      //premiere page de onboarding
       widget: Scaffold(
         backgroundColor: Colors.white,
         body: Center(
@@ -48,6 +49,7 @@ class Onboarding_page extends StatelessWidget {
       ),
     ),
     PageModel(
+      // deuxieme page introductive
       widget: Scaffold(
         backgroundColor: Colors.white,
         body: Center(
@@ -90,6 +92,7 @@ class Onboarding_page extends StatelessWidget {
       ),
     ),
     PageModel(
+      //troisieme page introductive
       widget: Scaffold(
         backgroundColor: Colors.white,
         body: Center(
@@ -140,6 +143,7 @@ class Onboarding_page extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Onboarding(
+        //un widget venant d'un package de flutter pub dev permettant de mettre des pages introductives a l'application
         background: Colors.white,
         proceedButtonStyle: ProceedButtonStyle(
           proceedButtonColor: kCouleurPrimaire,
@@ -156,12 +160,13 @@ class Onboarding_page extends StatelessWidget {
                 transitionDuration: Duration(seconds: 2),
                 pageBuilder: (BuildContext context, Animation<double> animation,
                         Animation<double> secondaryAnimation) =>
-                    AuthenticationWrapper(),
+                    AuthenticationWrapper(), //redirection vers home ou sign in page selon si il y a un utilisateur connecte ou non
                 transitionsBuilder: (BuildContext context,
                         Animation<double> animation,
                         Animation<double> secondaryAnimation,
                         Widget child) =>
                     ScaleTransition(
+                  //animation de transition entre les pages
                   scale: Tween<double>(
                     begin: 0.0,
                     end: 1.0,
@@ -178,7 +183,7 @@ class Onboarding_page extends StatelessWidget {
             );
           },
         ),
-        pages: onboardingPagesList,
+        pages: onboardingPagesList, //liste des pages introductives
         isSkippable: true,
         indicator: Indicator(
           indicatorDesign: IndicatorDesign.line(

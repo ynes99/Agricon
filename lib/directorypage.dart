@@ -21,7 +21,9 @@ class _DirectoryState extends State<Directory> {
   void initState() {
     setState(() {
       // 2
-      user = context.read<AuthenticationService>().getUser();
+      user = context
+          .read<AuthenticationService>()
+          .getUser(); //instance de l'utilisateur actuel
     });
     super.initState();
   }
@@ -29,6 +31,7 @@ class _DirectoryState extends State<Directory> {
   int _selectedIndex = 0;
   PageController _pageController = PageController();
   List<Widget> _screens = [
+    //nav bar pages
     Home(),
     Blog(),
     Partenaires(),
@@ -41,6 +44,7 @@ class _DirectoryState extends State<Directory> {
   }
 
   void _onItemTapped(int selectedIndex) {
+    //transition entre les pages de la nav bar
     _pageController.animateToPage(selectedIndex,
         duration: Duration(milliseconds: 500), curve: Curves.easeOut);
   }
@@ -55,6 +59,7 @@ class _DirectoryState extends State<Directory> {
         onPageChanged: _onPageChanged,
       ),
       bottomNavigationBar: BottomNavigationBar(
+        //widget nav bar
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(

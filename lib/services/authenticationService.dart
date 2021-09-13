@@ -14,6 +14,7 @@ class AuthenticationService {
 
   // 3
   Future<String> signIn({String email, String password}) async {
+    //authentification de l'utilisateur
     try {
       EasyLoading.show();
       await _firebaseAuth.signInWithEmailAndPassword(
@@ -28,6 +29,7 @@ class AuthenticationService {
   // 4
   Future<String> signUp(
       {String phone, String name, String email, String password}) async {
+    //inscription de l'utlisateur
     try {
       EasyLoading.show();
       await _firebaseAuth
@@ -54,6 +56,7 @@ class AuthenticationService {
 
   // 5
   Future<String> signOut() async {
+    //deconnexion de l'utilisateur'
     try {
       EasyLoading.show();
       await _firebaseAuth.signOut();
@@ -66,6 +69,7 @@ class AuthenticationService {
 
 // 6
   User getUser() {
+    //appel a l'instance qui represente l'utilisateur courant
     try {
       return _firebaseAuth.currentUser;
     } on FirebaseAuthException {
@@ -75,8 +79,9 @@ class AuthenticationService {
 }
 
 CollectionReference users = FirebaseFirestore.instance.collection('UserData');
-
+//reference de la collection ou on stocke les informations de l'utilisateur dans Firebase
 Future<void> updateUserName(String newname) {
+  //mettre à jour dans la bd le nom de l'utilisateur
   return users
       .doc('$uid')
       .update({'name': newname})
@@ -85,6 +90,7 @@ Future<void> updateUserName(String newname) {
 }
 
 Future<void> updateUserPhone(String newphone) {
+  //mettre à jour dans la bd le numero de telephone de l'utilisateur
   return users
       .doc('$uid')
       .update({'phone number': newphone})

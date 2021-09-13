@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:firebasetest/constants/constants.dart';
 
 class CustomAppBar extends StatelessWidget {
+  //app bar personnalise avec du gradient
   @override
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;

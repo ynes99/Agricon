@@ -27,6 +27,7 @@ class _HomeState extends State<Home> {
               alignment: Alignment.topCenter,
               decoration: const BoxDecoration(
                 gradient: LinearGradient(
+                  //couleur app bar
                   colors: <Color>[
                     Color(0xFF91DC3B),
                     Color(0xFF91DC3B),
@@ -46,6 +47,7 @@ class _HomeState extends State<Home> {
                   borderRadius: BorderRadius.circular(20),
                 ),
                 child: TabBar(
+                  //esthetique app bar
                   labelColor: Colors.black,
                   unselectedLabelColor: Colors.grey[700],
                   indicatorColor: Colors.lime,
@@ -112,6 +114,7 @@ class _HomeState extends State<Home> {
             ),
           ),
           body: TabBarView(
+            //contenu du tab bar chaque page et leurs elements
             controller: _controller,
             children: [
               Scaffold(
@@ -177,6 +180,7 @@ class _HomeState extends State<Home> {
 }
 
 class List_reusable extends StatelessWidget {
+  //liste des produits
   @override
   Widget build(BuildContext context) {
     return ListView(
@@ -211,6 +215,8 @@ class List_reusable extends StatelessWidget {
 }
 
 class Card_home extends StatelessWidget {
+  //element graphique contenant un produit exemple
+  //interface graphique reutilisable
   Card_home({@required this.asset});
   final String asset;
   @override

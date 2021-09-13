@@ -2,6 +2,7 @@ import 'package:firebasetest/constants/constants.dart';
 import 'package:flutter/material.dart';
 
 class Team extends StatelessWidget {
+  //page contenant les details de l'equipe
   @override
   Widget build(BuildContext context) {
     return SafeArea(

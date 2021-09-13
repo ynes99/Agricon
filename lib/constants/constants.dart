@@ -41,6 +41,7 @@ class username extends StatefulWidget {
 }
 
 class _usernameState extends State<username> {
+  //retournde le nom de l'utilisateur
   @override
   Widget build(BuildContext context) {
     return new StreamBuilder(
@@ -71,6 +72,7 @@ class Numero extends StatefulWidget {
 }
 
 class _NumeroState extends State<Numero> {
+  //retournde le numero de l'utilisateur
   @override
   Widget build(BuildContext context) {
     return new StreamBuilder(
